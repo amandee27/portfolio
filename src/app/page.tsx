@@ -1,7 +1,4 @@
-import Image from "next/image";
-import NavBar from "@/components/NavBar";
 import Header from "@/components/layout/Header";
-import DetailSection from "@/components/DetailSection";
 import AboutMe from "@/components/AboutMe";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
