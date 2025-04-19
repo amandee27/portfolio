@@ -1,37 +1,25 @@
 "use client";
 import React from "react";
 import profileImage from "../shared/ProfileImage3.jpg";
-import Image from "next/image";
 
 function AboutMe() {
-  const loadResume = () => {
-    console.log("Load Resume");
-  };
-  const loadGithub = () => {
-    console.log("Load Github");
-  };
-  const loadContact = () => {
-    console.log("Load Contact");
-  };
   return (
-    <div className="bg-slate-800/60">
-      <div className=" flex flex-col items-center mt-2 mb-8 ">
+    <div className="py-20">
+      <div className="flex flex-col items-center mt-2 mb-8">
         <img
-          className=" size-40 rounded-full outline-4"
+          className=" size-60 rounded-full outline-4"
           src={profileImage.src}
           alt=""
         />
       </div>
       <div className="mb-8">
-        <h1 className="text-center text-6xl">Amandee Ellawala</h1>
-        <h2 className="text-center text-3xl">Frontend Engineer</h2>
+        <h1 className="text-center text-6xl font-bold">Amandee Ellawala</h1>
+        <h2 className="text-center text-3xl font-bold">Frontend Engineer</h2>
       </div>
 
       <div className="flex flex-wrap justify-center my-6">
         <a
-          type="button"
           className="cursor-pointer text-black bg-white hover:hover:bg-gray-200  focus:ring-4 focus:outline-none focus:ring-[white]/50 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  mx-3 mb-2"
-          // onClick={loadResume}
           href="#"
         >
           <svg
@@ -68,26 +56,6 @@ function AboutMe() {
           </svg>
           Github
         </a>
-        {/* <button
-          type="button"
-          className="cursor-pointer  text-black bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-[white]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center   mx-8 mb-2"
-          onClick={loadContact}
-        >
-          <svg
-            className="w-4 h-4 me-2"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fillRule="evenodd"
-              d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z"
-              clipRule="evenodd"
-            />
-          </svg>
-          Contact
-        </button> */}
       </div>
     </div>
   );
