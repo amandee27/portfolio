@@ -31,9 +31,9 @@ function Contributions() {
   const router = useRouter();
 
   return (
-    <div>
-      <div className="text-center my-12">
-        <h1 className="text-5xl mb-2">Contributions</h1>
+    <div className=" bg-slate-800/60 py-12">
+      <div className="text-center mb-12 ">
+        <h1 className="text-5xl mb-2 font-bold">Contributions</h1>
         <h5>Open-source contributions and community involvement.</h5>
       </div>
 
@@ -41,7 +41,7 @@ function Contributions() {
         {ContributionsMain.map((item) => (
           <div
             key={item.pr}
-            className="max-w-80 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-black dark:border-gray-700 mx-6 my-4"
+            className="max-w-90 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-black dark:border-gray-700 mx-6 my-4"
           >
             <div className="grid grid-cols-6">
               <div className="col-span-5">
