@@ -21,6 +21,8 @@ function AboutMe() {
         <a
           className="cursor-pointer text-black bg-white hover:hover:bg-gray-200  focus:ring-4 focus:outline-none focus:ring-[white]/50 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  mx-3 mb-2"
           href="#"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <svg
             className="w-4 h-4 mr-2"
@@ -38,8 +40,10 @@ function AboutMe() {
           Resume
         </a>
         <a
-          className="cursor-pointer  text-black bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-[white]/50 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  mx-3 mb-2"
+          className="cursor-pointer  text-black bg-white hover:bg-gray-200 focus:ring-1 focus:outline-none focus:ring-[white]/50 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  mx-3 mb-2"
           href="https://github.com/amandee27"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <svg
             className="w-4 h-4 mr-2"

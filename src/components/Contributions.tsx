@@ -53,9 +53,11 @@ function Contributions() {
               </div>
               <div>
                 <div className="flex justify-end">
-                  <Link
+                  <a
                     href={item.issue}
-                    className="inline-flex items-center px-3 pt-5 text-sm font-medium text-center text-white  rounded-lg focus:ring-4 focus:outline-none  "
+                    className="inline-flex items-center p-1 text-sm font-medium text-center text-white  mt-3 mr-3 focus:bg-gray-100/50 focus:outline-none  "
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <svg
                       className="w-6 h-6 text-gray-800 dark:text-white"
@@ -74,7 +76,7 @@ function Contributions() {
                         d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"
                       />
                     </svg>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -92,9 +94,11 @@ function Contributions() {
               </p>
             </div>
             <div className="flex justify-end">
-              <Link
+              <a
                 href={item.pr}
-                className="inline-flex items-center mr-3 mb-3 text-sm font-medium text-center text-white  rounded-lg focus:ring-4 focus:outline-none  "
+                className="inline-flex items-center mr-3 mb-3 p-1 text-sm font-medium text-center text-white focus:bg-gray-100/50  focus:outline-none  "
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   className="w-6 h-6 text-gray-800 dark:text-white"
@@ -113,7 +117,7 @@ function Contributions() {
                     d="M8 8v8m0-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 8a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm6-2a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm0 0h-1a5 5 0 0 1-5-5v-.5"
                   />
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
         ))}
