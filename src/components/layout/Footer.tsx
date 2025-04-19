@@ -75,15 +75,28 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <a
-                href="#"
+                href="https://github.com/amandee27/portfolio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-muted-foreground hover:hover:text-gray-400 transition-colors"
               >
                 Fork this template on GitHub
               </a>
+              <div className="flex items-center gap-4">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    {link.icon}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
           <div id="contact">
@@ -109,19 +122,6 @@ function Footer() {
               if you&apos;d like to chat about oppotunities!
             </p>
           </div>
-        </div>
-        <div className="mt-8 flex items-center gap-4">
-          {socialLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
-            >
-              {link.icon}
-            </a>
-          ))}
         </div>
       </div>
     </footer>
