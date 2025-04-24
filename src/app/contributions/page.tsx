@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const contributions = [
   {
@@ -48,16 +50,62 @@ const contributions = [
     pr: "https://github.com/ghostfolio/ghostfolio/pull/4118",
     description: "Bugfix/Holdings are fetched in assistant for each change",
   },
-  { projectName: "", issue: "", pr: "", description: "" },
-  { projectName: "", issue: "", pr: "", description: "" },
-  { projectName: "", issue: "", pr: "", description: "" },
+  {
+    projectName: "Apollusia",
+    issue: "https://github.com/Morphclue/apollusia/issues/194",
+    pr: "https://github.com/Morphclue/apollusia/pull/197",
+    description: "Bug/Sum row doesn't update as we make changes to the poll",
+  },
+  {
+    projectName: "Hacktoberfest-projects",
+    issue:
+      "https://github.com/max-programming/hacktoberfest-projects/issues/228",
+    pr: "https://github.com/max-programming/hacktoberfest-projects/pull/230",
+    description: "Bug/Pagination does not reset when updating search params",
+  },
+  {
+    projectName: "Hacktoberfest-projects",
+    issue:
+      "https://github.com/max-programming/hacktoberfest-projects/issues/223",
+    pr: "https://github.com/max-programming/hacktoberfest-projects/pull/226",
+    description: "Star-range reset when selecting a new language",
+  },
 ];
 
 function ContributionsList() {
+  const router = useRouter();
   return (
     <div>
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-gray-700/20 min-h-screen">
-        <div className="flex flex-wrap justify-start">
+        <div className="flex justify-start">
+          <button
+            type="button"
+            className="text-white  hover:underline font-medium  text-sm px-5 text-center inline-flex items-center"
+            onClick={() => router.push("/")}
+          >
+            <svg
+              className="w-6 h-6 text-gray-800 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m15 19-7-7 7-7"
+              />
+            </svg>
+            Back
+          </button>
+          <h1 className="font-bold text-5xl my-6">Contributions</h1>
+        </div>
+
+        <div className="flex flex-wrap justify-center">
           {contributions.map((item) => (
             <div className="max-w-80 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-black dark:border-gray-700 mx-2 my-4">
               <div className="flex justify-end">
