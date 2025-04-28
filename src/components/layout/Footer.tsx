@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 const socialLinks = [
@@ -24,27 +23,6 @@ const socialLinks = [
     ),
   },
   {
-    label: "X",
-    href: "https://x.com/Amandee94",
-    icon: (
-      <svg
-        className="w-6 h-6 text-gray-800 dark:text-white"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          fillRule="evenodd"
-          d="M22 5.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.343 8.343 0 0 1-2.605.981A4.13 4.13 0 0 0 15.85 4a4.068 4.068 0 0 0-4.1 4.038c0 .31.035.618.105.919A11.705 11.705 0 0 1 3.4 4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 6.1 13.635a4.192 4.192 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 2 18.184 11.732 11.732 0 0 0 8.291 20 11.502 11.502 0 0 0 19.964 8.5c0-.177 0-.349-.012-.523A8.143 8.143 0 0 0 22 5.892Z"
-          clipRule="evenodd"
-        />
-      </svg>
-    ),
-  },
-  {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/amandee/",
     icon: (
@@ -63,6 +41,23 @@ const socialLinks = [
           clipRule="evenodd"
         />
         <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
+      </svg>
+    ),
+  },
+  {
+    label: "X",
+    href: "https://x.com/Amandee94",
+    icon: (
+      <svg
+        className="w-5 h-5 text-gray-800 dark:text-white"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
       </svg>
     ),
   },
