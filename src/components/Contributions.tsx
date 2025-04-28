@@ -31,7 +31,7 @@ function Contributions() {
   const router = useRouter();
 
   return (
-    <div className=" bg-slate-800/60 py-12">
+    <div className="max-w-full bg-slate-800/60 py-12">
       <div className="text-center mb-12 ">
         <h1 className="text-5xl mb-2 font-bold">Contributions</h1>
         <h5>Open-source contributions and community involvement.</h5>
@@ -80,13 +80,6 @@ function Contributions() {
                 </div>
               </div>
             </div>
-            {/* <a href="#">
-             <img
-               className="rounded-t-lg"
-               src="/docs/images/blog/image-1.jpg"
-               alt=""
-             />
-           </a> */}
 
             <div className="px-5">
               <p className="mb-2 font-normal  text-[14px] text-gray-700 dark:text-gray-400">
