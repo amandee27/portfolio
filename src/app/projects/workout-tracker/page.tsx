@@ -1,5 +1,4 @@
 "use client";
-import Header from "@/components/layout/Header";
 import React from "react";
 import LoginPage from "../../../shared/LoginPage.png";
 import SignInPage from "../../../shared/SignInPage.png";
@@ -9,9 +8,33 @@ import EditWorkoutPage from "../../../shared/EditWorkoutPage.png";
 import ExercisesPage from "../../../shared/ExercisePage.png";
 import CalendarPage from "../../../shared/CalendarPage.png";
 import { useRouter } from "next/navigation";
+import type { LightGallery } from "lightgallery/lightgallery";
+import LightGalleryComponent from "lightgallery/react";
+
+// import styles
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+
+// import plugins if you need
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+import { useRef } from "react";
+import { image } from "framer-motion/m";
+
+const images = [
+  { srcName: LoginPage.src, id: "Login Page" },
+  { srcName: SignInPage.src, id: "Sign In Page" },
+  { srcName: MyWorkoutPage.src, id: "My Workout Page" },
+  { srcName: LogWorkoutPage.src, id: "Log Workout Page" },
+  { srcName: EditWorkoutPage.src, id: "Edit Workout Page" },
+  { srcName: ExercisesPage.src, id: "Exercises Page" },
+  { srcName: CalendarPage.src, id: "Calendar Page" },
+];
 
 function WorkoutTracker() {
   const router = useRouter();
+  const lightBoxRef = useRef<LightGallery | null>(null);
   return (
     <div>
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-gray-700/20 min-h-screen">
@@ -40,82 +63,102 @@ function WorkoutTracker() {
             </svg>
             Back
           </button>
-          <h1 className="font-bold text-5xl my-6">Workout Tracker</h1>
+          <h1 className="font-bold text-5xl mt-6">Workout Tracker</h1>
         </div>
-
-        <h2 className="font-bold text-3xl my-4">Tech Stack</h2>
-        <div className="flex flex-wrap">
+        <div className="ml-25 flex flex-wrap">
           <button
             type="button"
-            className="hover:bg-black border border-white text-white text-[14px] rounded px-3 mx-2 my-2"
+            className="hover:bg-black border border-white text-white text-[11px] rounded px-3 mx-2 my-2"
           >
             React
           </button>
           <button
             type="button"
-            className="hover:bg-black border border-white text-white text-[14px] rounded px-3 mx-2 my-2"
+            className="hover:bg-black border border-white text-white text-[11px] rounded px-3 mx-2 my-2"
           >
             Javascript
           </button>
           <button
             type="button"
-            className="hover:bg-black border border-white text-white text-[14px] rounded px-3 mx-2 my-2"
+            className="hover:bg-black border border-white text-white text-[11px] rounded px-3 mx-2 my-2"
           >
             AntD
           </button>
           <button
             type="button"
-            className="hover:bg-black border border-white text-white text-[14px] rounded px-3 mx-2 my-2"
+            className="hover:bg-black border border-white text-white text-[11px] rounded px-3 mx-2 my-2"
           >
             Firebase
           </button>
         </div>
-        <h2 className="font-bold text-3xl my-5">Description</h2>
-        <h2 className="font-bold text-3xl">Page Info</h2>
-        <h2 className="font-bold text-xl my-6">Login Page</h2>
-        <img
-          className="h-auto max-w-5xl mx-auto shadow-lg ring-2"
-          src={LoginPage.src}
-          alt="image description"
-        ></img>
-        <h2 className="font-bold text-xl my-6">SignIn Page</h2>
-        <img
-          className="h-auto  max-w-5xl mx-auto shadow-lg ring-2"
-          src={SignInPage.src}
-          alt="image description"
-        ></img>
-        <h2 className="font-bold text-xl my-6">
-          My Workouts Page/ Landing Page
-        </h2>
-        <img
-          className="h-auto  max-w-5xl mx-auto shadow-lg ring-2"
-          src={MyWorkoutPage.src}
-          alt="image description"
-        ></img>
-        <h2 className="font-bold text-xl my-6">Log Workout Page</h2>
-        <img
-          className="h-auto  max-w-5xl mx-auto shadow-lg ring-2"
-          src={LogWorkoutPage.src}
-          alt="image description"
-        ></img>
-        <h2 className="font-bold text-xl my-6">Edit Workout Page</h2>
-        <img
-          className="h-auto  max-w-5xl mx-auto shadow-lg ring-2"
-          src={EditWorkoutPage.src}
-          alt="image description"
-        ></img>
-        <h2 className="font-bold text-xl my-6">Exercises Page</h2>
-        <img
-          className="h-auto  max-w-5xl mx-auto shadow-lg ring-2"
-          src={ExercisesPage.src}
-          alt="image description"
-        ></img>
-        <h2 className="font-bold text-xl my-6">Calendar</h2>
-        <img
-          className="h-auto  max-w-5xl mx-auto shadow-lg ring-2"
-          src={CalendarPage.src}
-          alt="image description"
-        ></img>
+        <div className="my-6">
+          <p>
+            Workout Tracker is a web-based application designed to help fitness
+            enthusiasts and casual gym goers efficiently track, log, and analyze
+            their workouts. The app provides a user-friendly interface for
+            creating customized workout routines, logging exercise data in
+            real-time and monitoring progress.
+          </p>
+          <p className="my-6">
+            With features like historical workout logs, personalized fitness
+            goals <b>Workout Tracker</b> empowers users to stay consistent and
+            improve their performance over time. The app is ideal for
+            individuals training with weights, bodyweight exercises, cardio, or
+            a mix of fitness activities.{" "}
+          </p>
+          <h4 className="font-bold text-xl">Core Features</h4>
+          <ul className="mx-8 my-4">
+            <li>
+              <b>Exercise Logging: </b>Log exercises with sets, reps, weight,
+              and notes.
+            </li>
+            <li>
+              <b>Logged exercises: </b>View your logged workouts with clean,
+              beautiful table
+            </li>
+            <li>
+              <b>Workout Calendar: </b>Plan and schedule future workouts.
+            </li>
+            <li>
+              <b>Exercise List: </b>List of exercises such as weightlifting,
+              cardio, HIIT & more
+            </li>
+          </ul>
+        </div>
+        <div className="grid grid-cols-3 gap-4 my-6">
+          {images.map((imageSrc, idx) => (
+            <div key={imageSrc.srcName} className="relative">
+              <img
+                className="h-auto max-w-full rounded-lg cursor-pointer"
+                src={imageSrc.srcName}
+                alt="image description"
+                data-tip="test"
+              />
+              <div
+                className="absolute h-full w-full bg-black/30 flex items-center justify-center -bottom-10 hover:bottom-0 opacity-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+                onClick={() => {
+                  lightBoxRef.current?.openGallery(idx);
+                }}
+              >
+                <p className="text-white">{imageSrc.id}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <LightGalleryComponent
+          onInit={(ref) => {
+            if (ref) {
+              lightBoxRef.current = ref.instance;
+            }
+          }}
+          speed={500}
+          plugins={[lgThumbnail, lgZoom]}
+          dynamic
+          dynamicEl={images.map((image) => ({
+            src: image.srcName,
+            thumb: image.srcName,
+          }))}
+        ></LightGalleryComponent>
       </div>
     </div>
   );
