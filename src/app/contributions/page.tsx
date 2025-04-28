@@ -90,7 +90,7 @@ function ContributionsList() {
         <div className="flex justify-start">
           <button
             type="button"
-            className="text-white  hover:underline font-medium  text-sm px-5 text-center inline-flex items-center"
+            className="cursor-pointer text-white  hover:underline font-medium  text-sm pr-5 text-center inline-flex items-center"
             onClick={() => router.push("/")}
           >
             <svg
@@ -107,10 +107,9 @@ function ContributionsList() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d="m15 19-7-7 7-7"
+                d="M5 12h14M5 12l4-4m-4 4 4 4"
               />
             </svg>
-            Back
           </button>
           <h1 className="font-bold text-5xl my-6">Contributions</h1>
         </div>
