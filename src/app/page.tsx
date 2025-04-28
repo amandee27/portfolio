@@ -10,7 +10,7 @@ export default function Home() {
     <div>
       <Header></Header>
       <main>
-        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-gray-700/20">
+        <div className="py-6 bg-gray-700/20">
           <section id="about">
             <AboutMe></AboutMe>
           </section>
