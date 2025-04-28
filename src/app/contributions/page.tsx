@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 
 const contributions = [
   {
+    id: 1,
     projectName: "Ghostfolio",
     issue: "https://github.com/ghostfolio/ghostfolio/issues/3845",
     pr: "https://github.com/ghostfolio/ghostfolio/pull/4080",
@@ -12,12 +13,14 @@ const contributions = [
       "Feature/Extract historical market data editor to @ghostfolio/ui ",
   },
   {
+    id: 2,
     projectName: "Ghostfolio",
     issue: "https://github.com/ghostfolio/ghostfolio/issues/3729",
     pr: "https://github.com/ghostfolio/ghostfolio/pull/4157",
     description: "Feature/Split scraper configuration into sub form",
   },
   {
+    id: 3,
     projectName: "Ghostfolio",
     issue: "https://github.com/ghostfolio/ghostfolio/issues/4127",
     pr: "https://github.com/ghostfolio/ghostfolio/pull/4281",
@@ -25,12 +28,14 @@ const contributions = [
       "Feature/Extend holding detail dialog by historical market data editor",
   },
   {
+    id: 4,
     projectName: "Ghostfolio",
     issue: "https://github.com/ghostfolio/ghostfolio/issues/3941",
     pr: "https://github.com/ghostfolio/ghostfolio/pull/4031",
     description: "Feature/Extend assistant by selector for holdings",
   },
   {
+    id: 5,
     projectName: "Ghostfolio",
     issue: "https://github.com/ghostfolio/ghostfolio/issues/3972",
     pr: "https://github.com/ghostfolio/ghostfolio/pull/4043",
@@ -38,6 +43,7 @@ const contributions = [
       "Feature/Change slider to range slider in rule settings dialog",
   },
   {
+    id: 6,
     projectName: "Ghostfolio",
     issue: "https://github.com/ghostfolio/ghostfolio/issues/3932",
     pr: "https://github.com/ghostfolio/ghostfolio/pull/3974",
@@ -45,18 +51,21 @@ const contributions = [
       "Bugfix/X-Axis of investment chart component does not adapt on date range change",
   },
   {
+    id: 7,
     projectName: "Ghostfolio",
     issue: "https://github.com/ghostfolio/ghostfolio/issues/4065",
     pr: "https://github.com/ghostfolio/ghostfolio/pull/4118",
     description: "Bugfix/Holdings are fetched in assistant for each change",
   },
   {
+    id: 8,
     projectName: "Apollusia",
     issue: "https://github.com/Morphclue/apollusia/issues/194",
     pr: "https://github.com/Morphclue/apollusia/pull/197",
     description: "Bug/Sum row doesn't update as we make changes to the poll",
   },
   {
+    id: 9,
     projectName: "Hacktoberfest-projects",
     issue:
       "https://github.com/max-programming/hacktoberfest-projects/issues/228",
@@ -64,6 +73,7 @@ const contributions = [
     description: "Bug/Pagination does not reset when updating search params",
   },
   {
+    id: 10,
     projectName: "Hacktoberfest-projects",
     issue:
       "https://github.com/max-programming/hacktoberfest-projects/issues/223",
@@ -76,7 +86,7 @@ function ContributionsList() {
   const router = useRouter();
   return (
     <div>
-      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-gray-700/20 min-h-screen">
+      <div className="mx-auto max-w-full px-4 py-6 sm:px-6 lg:px-8 bg-gray-700/20 min-h-screen">
         <div className="flex justify-start">
           <button
             type="button"
@@ -105,9 +115,12 @@ function ContributionsList() {
           <h1 className="font-bold text-5xl my-6">Contributions</h1>
         </div>
 
-        <div className="flex flex-wrap justify-center">
+        <div className="grid grid-cols-3 gap-4">
           {contributions.map((item) => (
-            <div className="max-w-80 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-black dark:border-gray-700 mx-2 my-4">
+            <div
+              key={item.id}
+              className="h-auto max-w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-black dark:border-gray-700 mx-2 my-4"
+            >
               <div className="flex justify-end">
                 <Link
                   href={item.issue}
