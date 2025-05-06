@@ -124,6 +124,8 @@ function ContributionsList() {
                 <Link
                   href={item.issue}
                   className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white  rounded-lg focus:ring-4 focus:outline-none  "
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <svg
                     className="w-6 h-6 text-gray-800 dark:text-white"
@@ -157,6 +159,8 @@ function ContributionsList() {
                   <Link
                     href={item.pr}
                     className="inline-flex items-center   text-sm font-medium text-center text-white  rounded-lg focus:ring-4 focus:outline-none  "
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <svg
                       className="w-6 h-6 text-gray-800 dark:text-white"
