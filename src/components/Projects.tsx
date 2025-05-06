@@ -13,7 +13,7 @@ const projects = [
   {
     projectName: "Conduit-Blog App",
     demo: "https://github.com/amandee27/conduit-blog-app",
-    page: "/projects/conduit-blog",
+    page: "https://github.com/amandee27/conduit-blog-app", // "/projects/conduit-blog",
     description:
       "This web application is a streamlined, user-friendly platform built to help writers, bloggers, and content creators craft and publish blog articles with ease.",
     techStack: ["Angular", "Typescript", "Bootstrap"],
@@ -21,7 +21,7 @@ const projects = [
   {
     projectName: "Portfolio",
     demo: "https://github.com/amandee27/portfolio",
-    page: "/projects/portfolio",
+    page: "https://github.com/amandee27/portfolio", //"/projects/portfolio",
     description:
       "This portfolio web application is a sleek platform designed to showcase your projects, skills, and project contributions online",
     techStack: ["NextJS", "Typescript", "Tailwind CSS"],
@@ -66,6 +66,7 @@ function Projects() {
               <Link
                 href={item.page}
                 className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-white rounded-lg hover:bg-gray-200 focus:ring-2  focus:bg-white"
+                target="_blank"
               >
                 Read more
                 <svg
