@@ -20,7 +20,6 @@ import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 import { useRef } from "react";
-import { image } from "framer-motion/m";
 
 const images = [
   { srcName: LoginPage.src, id: "Login Page" },
