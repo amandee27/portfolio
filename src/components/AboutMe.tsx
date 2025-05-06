@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import profileImage from "../shared/ProfileImage3.jpg";
+import profileImage from "../shared/Profile.jpg";
 
 function AboutMe() {
   return (
