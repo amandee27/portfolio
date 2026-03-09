@@ -32,7 +32,7 @@ function WorldClock() {
                 />
               </svg>
             </button>
-            <h1 className="font-bold text-5xl mt-6">World Clock Portal</h1>
+            <h1 className="font-bold text-5xl mt-6">Timezone Clock</h1>
           </div>
           <div className="ml-10 flex flex-wrap">
             <button
@@ -122,7 +122,7 @@ function WorldClock() {
           <div className="flex justify-start">
             <div className="px-6">
               <a
-                href="https://world-clock-portal.vercel.app/"
+                href="https://timezone-clock-online.vercel.app/"
                 className="inline-flex items-center mt-1  text-sm font-medium text-center text-white focus:outline-none  "
                 target="_blank"
                 rel="noopener noreferrer"
@@ -149,7 +149,7 @@ function WorldClock() {
             </div>
             <div className="px-6">
               <a
-                href="https://github.com/amandee27/world-clock-portal"
+                href="https://github.com/amandee27/timezone-clock"
                 className="inline-flex items-center mt-1  text-sm font-medium text-center text-white focus:outline-none  "
                 target="_blank"
                 rel="noopener noreferrer"
@@ -176,7 +176,7 @@ function WorldClock() {
           <div>
             <div className="w-full max-w-5xl mt-6 mx-auto border-1 border-amber-50">
               <video className="w-full shadow-lg" controls muted autoPlay loop>
-                <source src="/shared/world-clock-portal.mp4" type="video/mp4" />
+                <source src="/shared/timezone_clock.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

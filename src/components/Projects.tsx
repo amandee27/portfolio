@@ -3,11 +3,11 @@ import React from "react";
 
 const projects = [
   {
-    projectName: "World Clock Portal",
-    demo: "https://world-clock-portal.vercel.app/",
-    page: "/projects/world-clock",
+    projectName: "Timezone Clock",
+    demo: "https://timezone-clock-online.vercel.app/",
+    page: "/projects/timezone-clock",
     description:
-      "This world clock web application is a digital time zone tool that allows users to view and manage time in multiple locations around the globe.",
+      "This timezone clock web application is a digital time zone tool that allows users to view and manage time in multiple locations around the globe.",
     techStack: ["React 19", "Redux", "Typescript", "Tailwind CSS", "Node.js"],
   },
   {

@@ -19,8 +19,8 @@ function AboutMe() {
 
       <div className="flex flex-wrap justify-center my-6">
         <a
-          className="cursor-pointer text-black bg-white hover:hover:bg-gray-200  focus:ring-4 focus:outline-none focus:ring-[white]/50 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  mx-3 mb-2"
-          href="/Amandee_Ellawala_Resume.pdf"
+          className="cursor-pointer text-black bg-white hover:bg-gray-200  focus:ring-1 focus:outline-none focus:ring-[white]/50 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  mx-3 mb-2"
+          href="/Amandee_Ellawala_CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
